@@ -9,19 +9,19 @@ ticket() {
   case "$1" in
     1)
       printf '%s\n' \
-        'CUSTOMER TICKET — Application unavailable after deployment' \
+        'CUSTOMER TICKET: Application unavailable after deployment' \
         'The web application never becomes available after this morning deployment.' \
         'Determine the root cause, restore service, and verify the customer workflow.'
       ;;
     2)
       printf '%s\n' \
-        'CUSTOMER TICKET — API cannot load customer data' \
+        'CUSTOMER TICKET: API cannot load customer data' \
         'The application starts, but /customers returns 503 after a Compose change.' \
         'Determine whether the failure is application, database, or connectivity related.'
       ;;
     3)
       printf '%s\n' \
-        'CUSTOMER TICKET — Database access failed after credential rotation' \
+        'CUSTOMER TICKET: Database access failed after credential rotation' \
         'The database is healthy, but the application returns 503 after credentials changed.' \
         'Identify the mismatched configuration, restore service, and verify the request.'
       ;;
